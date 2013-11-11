@@ -1,0 +1,10 @@
+Readme
+
+* Set local from params, subdomain
+* default_url_options
+* scope 
+* translate( yml and rb)
+* passing variables
+* localize time
+* inflections
+* index.es.html.erb
