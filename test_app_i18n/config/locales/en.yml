@@ -21,8 +21,41 @@
 
 en:
   hello: "Hello world"
+  hi: "sd"
   Name: "Name"
   greet_username: "%{message}, %{user}!"
   time:
     formats:
       short: "arrrround %H'ish"
+  also_missing: 'Naah'
+  msg:
+    one: 'one message'
+    other: '%{count} messages'
+  link_html: '<a href="www.google.com">Google</a>'
+  activerecord:
+    models:
+      user: Dude
+    attributes:
+      user:
+        login: "Handle"
+        name: "Naam"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: '-Blank na chod bhai'
+  number:
+    percentage:
+      format: 
+        # These five are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+        # significant: false
+        # strip_insignificant_zeros: false
+        format: "%n sd%"
+  user_mailer:
+    welcome:
+      subject: "Welcome to our site"
+    

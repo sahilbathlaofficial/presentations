@@ -7,6 +7,29 @@
       <%=t 'greet_username', user: "Bill", message: "Goodbye" %>
       <p><%=   l Time.now, format: :short %></p>
       <p><%= 'html'.humanize %></p>
+
+      <!--scoped messages-->
+      <%# I18n.t :record_invalid, scope: [:activerecord, :errors, :messages] %>
+      <%# I18n.translate "activerecord.errors.messages.record_invalid" %>
+      <%# I18n.t :record_invalid, scope: 'activerecord.errors.messages' %>
+
+      <%= I18n.t :missing, default: 'Not here' %>
+      <%= I18n.t :missing, default: [:also_missing, 'Not here'] %>
+      
+      <%= I18n.t [:hi, :hello] %>
+      <p><%= I18n.t 'activerecord.errors.messages' %></p>
+      
+      <p><%= I18n.t :msg, count: 2 %></p>
+      
+      <!-- I18n.t won't work.. use t -->
+      <p><%= t '.Name', locale: :es %></p>
+      
+      <p><%= t :link_html %></p>
+      
+      <p><%= User.model_name.human %></p>
+      <p><%= User.human_attribute_name("login") %></p>
+      <p><%= number_to_percentage(20.5) %></p>
+      
       <th>Email</th>
       <th></th>
       <th></th>

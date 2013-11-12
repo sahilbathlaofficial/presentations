@@ -16,26 +16,30 @@
 #   inflect.acronym 'RESTful'
 # end
 
+# require '/home/user/application_controller'
+# class ApplicationController
+# end
 require 'active_support/inflector'
 
-# p 'home/sahil_z'.camelize
-# p 'Home::SahilZ'.underscore
+# p 'home/sahil_zZZZZZ'.camelize
+# p 'Home::SahilZZZZZZZ'.underscore
 # p 'ducks'.classify
 
 # X = 'test'
-# p 'X'.safe_constantize
+#p 'X'.safe_constantize
 # p 'X'.constantize
+ # p 'application_controller'.classify.constantize
 
 # p 'a_b_c'.dasherize
 # p 'ActiveRecord::CoreExtensions::String::Inflections'.demodulize
 # p 'Message'.foreign_key 
 # p 'employee_salary'.humanize 
-# p 'sahil rocks'.parameterize('?')
+# p 'sahil+rocks'.parameterize
 # p ActiveSupport::Inflector.ordinal(2)
-# p ActiveSupport::Inflector.ordinalize(2)
-# p 'sahil'.pluralize(:en)
+# p ActiveSupport::Inflector.ordinalize(11)
+# p 'sahil'.pluralize(:es)
 # p 'words'.singularize(:en)
-# p 'egg_and_ham'.tableize    
+# p 'RecordScorer'.pluralize 
 # p 'x-men: the last stand'.titleize   
 
 
@@ -49,7 +53,8 @@ require 'active_support/inflector'
 #     }
 #   }
 # })
-# p ActiveSupport::Inflector.transliterate('Ærøskøbing','?')
+
+# p ActiveSupport::Inflector.transliterate('Ærøskøbing₹','?')
 
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
@@ -61,7 +66,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   # inflect.plural /^(ox)$/i, '\1en'
   # inflect.singular /^(ox)en$/i, '\1'
   # inflect.uncountable %w( money information rice )
-  # inflect.clear :plural #(Other options => :all, :singulars, :humans, :uncountables)
+  # inflect.clear :plurals #(Other options => :all, :singulars, :humans, :uncountables)
 end
 
 #Acronym
@@ -75,7 +80,7 @@ end
 # p 'mcdonald'.classify
 
 # clear
-#p 'head'.pluralize
+# p 'head'.pluralize
 
 # Human
 # p 'tmp'.titleize

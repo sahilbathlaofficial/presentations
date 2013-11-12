@@ -1,4 +1,8 @@
 TestApp::Application.routes.draw do
+
+  match 'hello', to: HelloMetalController.action(:index), via: ['get','post']
+  # get '/',as: :root
+  # resources :xyzs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
