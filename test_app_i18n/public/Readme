@@ -19,6 +19,6 @@ Readme
 5 - Custom Translations
 * Models
 * Model errors
-5.2 guides api
-5.3 other methods using transalation(i.e - Number to currency/percentage)
+5.2 guides api(mailer)
+5.3 other methods using transalation(i.e - Number to currency/percentage  )
 https://github.com/rails/rails/blob/master/activesupport/lib/active_support/locale/en.yml#L15
