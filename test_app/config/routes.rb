@@ -1,6 +1,7 @@
 TestApp::Application.routes.draw do
 
   match 'hello', to: HelloMetalController.action(:index), via: ['get','post']
+  resources 'users'
   # get '/',as: :root
   # resources :xyzs
   # The priority is based upon order of creation: first created -> highest priority.

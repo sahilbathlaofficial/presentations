@@ -20,5 +20,10 @@ module TestApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.active_record.observers = :post_observer
+    # config.generators do |g|
+    #     g.assets false
+    # end
+
+    config.assets.paths << Rails.root.join("my_folder")
   end
 end

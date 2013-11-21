@@ -1,0 +1,47 @@
+# Framework to concatenate and minify or compress JavaScript and CSS assets.
+# It adds the ability to write these assets in other languages such as CoffeeScript, Sass and ERB.
+# Fewer Requests faster application
+
+#Turning of sprockets 
+#config.assets.enabled = false
+#rails new appname --skip-sprockets
+
+# Concatenate
+# One master file
+# In production, Rails inserts an MD5 fingerprint into each filename so that the file is cached by the web browser
+
+# Minification
+# Removing whitespace
+
+# What is Fingerprinting and Why Should I Care?
+	# Change filename as per file content to encourage caching by browsers as a cache of file is maintained if the fingerprint is same
+	# Rails using MD5 digest on contents - global-908e25f4bf641868d8683022a5b62f54.css
+	# Earlier /stylesheets/global.css?1309495796
+		#Not all caches will reliably cache content where the filename only differs by query parameters
+
+
+#2 - Using Asset pipelines
+# public directory - no compilation. in production converted to public/assets
+# require_tree -code
+# PreCompilation only in development not in production :P so you will get errors for .scss or .coffee
+
+#2.1 - Disable generation of assets file ( application.rb) -code
+#2.2 - Asset organization api
+#2.2.1  Rails.application.config.assets.paths -code
+# <%= image_tag "rails.png" %> - asset_path helper
+
+#2.4 Manifests
+#JS = //= require
+#Css = /* *= require */
+# Rails.application.config.assets.compress
+
+#3 Development mode
+#debug = false(separete asset file)
+
+#4 Production mode
+# config.assets.digest - FingerPrint
+# config.assets.prefix - public/assets compiled assets
+
+4.1 Precompiling assests
+RAILS_ENV=production bundle exec rake assets:precompile
+config.assets.initialize_on_precompile: false	 
