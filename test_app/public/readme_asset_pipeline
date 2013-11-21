@@ -33,7 +33,7 @@
 #2.4 Manifests
 #JS = //= require
 #Css = /* *= require */
-# Rails.application.config.assets.compress
+# Rails.application.config.assets.compress(to concatenate)
 
 #3 Development mode
 #debug = false(separete asset file)
@@ -43,5 +43,16 @@
 # config.assets.prefix - public/assets compiled assets
 
 4.1 Precompiling assests
-RAILS_ENV=production bundle exec rake assets:precompile
-config.assets.initialize_on_precompile: false	 
+1) RAILS_ENV=production bundle exec rake assets:precompile + config.serve_static_assets = true
+or 
+config.assets.compile = false
+2) config.assets.initialize_on_precompile: false	(Heroku -doubt)
+3) Adding precompiles :- config.assets.precompile += ['admin.js', 'admin.css', 'swfObject.js']
+4) manifest.json file + Compressed files(max compression gzip - nginx)
+
+#5 Customizing pipeline
+5.1) Css Compression - config.assets.css_compressor = :yui
+		js - config.assets.js_compressor = :uglifier
+		Doubt - not working in development mode with compress but digest option
+
+#6 Assests cache store - covered by Jatin

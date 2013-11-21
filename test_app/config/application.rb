@@ -24,6 +24,8 @@ module TestApp
     #     g.assets false
     # end
 
-    config.assets.paths << Rails.root.join("my_folder")
+    # config.assets.prefix = '/app/assets/x'
+    # config.assets.initialize_on_precompile = false
+    config.assets.paths << Rails.root.join("my_folder", "public")
   end
 end
