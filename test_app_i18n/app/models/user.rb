@@ -1,3 +1,4 @@
-class User < ActiveRecord::Base
-  validates :name, presence: true
+require 'active_resource'
+class User < ActiveResource::Base
+  self.site = "http://localhost:3000/api/"
 end

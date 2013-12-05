@@ -1,7 +1,13 @@
 TestApp::Application.routes.draw do
 
+  devise_for :people
+  get "users/index"
+  root to: 'people#index'
   match 'hello', to: HelloMetalController.action(:index), via: ['get','post']
   resources 'users'
+  namespace 'api' do
+    resources 'users', only: [:show, :index]
+  end
   # get '/',as: :root
   # resources :xyzs
   # The priority is based upon order of creation: first created -> highest priority.

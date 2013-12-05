@@ -3,7 +3,7 @@
 # Fewer Requests faster application
 
 #Turning of sprockets 
-#config.assets.enabled = false
+#config.assets.enabled = false(Doubt - Depricated)
 #rails new appname --skip-sprockets
 
 # Concatenate
@@ -23,17 +23,17 @@
 #2 - Using Asset pipelines
 # public directory - no compilation. in production converted to public/assets
 # require_tree -code
-# PreCompilation only in development not in production :P so you will get errors for .scss or .coffee
+# Compilation only in development not in production :P so you will get errors for .scss or .coffee
 
 #2.1 - Disable generation of assets file ( application.rb) -code
 #2.2 - Asset organization api
-#2.2.1  Rails.application.config.assets.paths -code
+#2.2.1  Rails.application.config.assets.paths -code * added paths need to be required
 # <%= image_tag "rails.png" %> - asset_path helper
 
 #2.4 Manifests
 #JS = //= require
 #Css = /* *= require */
-# Rails.application.config.assets.compress(to concatenate)
+# Rails.application.config.assets.compress(to concatenate) - Doubt
 
 #3 Development mode
 #debug = false(separete asset file)

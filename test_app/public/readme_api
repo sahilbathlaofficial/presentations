@@ -1,0 +1,5 @@
+What is an API?
+
+Application Programmer Interface -  is a set of routines, protocols, and tools for building software applications. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.
+
+Hiding the complexity of code behind a single consistent API call. i.e create_login . 

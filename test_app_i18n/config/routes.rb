@@ -1,6 +1,7 @@
 TestAppI18n::Application.routes.draw do
  
 
+  resources :users
   # resources :users
   #  resources :posts
 

@@ -1,0 +1,10 @@
+# Adding template while creating a new rails app
+$ rails new blog -m ~/template.rb
+$ rails new blog -m http://example.com/template.rb
+
+# Adding template to an existing rails app
+rake rails:template LOCATION=./template.rb
+rake rails:template LOCATION=http://example.com/template.rb
+
+#options from guides http://guides.rubyonrails.org/rails_application_templates.html
+

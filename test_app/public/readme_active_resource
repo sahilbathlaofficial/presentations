@@ -1,0 +1,3 @@
+Model classes are mapped to remote REST resources by Active Resource much the same way Active Record maps model classes to database tables.
+
+When a request is made to a remote resource, a REST JSON request is generated, transmitted, and the result received and serialized into a usable Ruby object.
