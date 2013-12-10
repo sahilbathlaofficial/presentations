@@ -1,0 +1,17 @@
+== Topics covered in this application 
+
+ - Source - http://pat.github.io/thinking-sphinx/
+ - git - https://github.com/pat/thinking-sphinx
+
+* Thinking sphinx - connector b/w sphinx and ActiveRecord
+* Sphinx - Sphinx is a very fast search engine that indexes data and provides flexible ways of searching it. Install Sphinx
+
+* When indexing your data, Sphinx talks directly to your data source itself – which must be one of MySQL, PostgreSQL, or XML files
+
+* Fields v/s Attributes
+ - Fields are the content for your search queries
+ - They are only string data – you could have numbers and dates and such in your fields, but Sphinx will only treat them as strings, nothing else.
+ - No model methods
+
+  - Attributes are used for sorting, filtering and grouping your search results.
+  - They’re limited to the following data types: integers, floats, datetimes (as Unix timestamps – and thus integers anyway), booleans, and strings. 
